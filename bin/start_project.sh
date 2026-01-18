@@ -9,6 +9,8 @@ cd $GITHUB_WORKSPACE/backend/
 npm cache clean --force
 npm ci
 npm run build
+cd $DIR_TESTS/data
 docker compose ps
 docker logs pg
+cd $GITHUB_WORKSPACE/backend/
 npm run start:dev &
